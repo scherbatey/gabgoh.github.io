@@ -1,0 +1,104 @@
+Epidemic Calculator
+Day
+218
+Susceptible
+∑ 6,138,598 (87.69%)
+Δ -76 / day
+Population not immune to disease.
+Exposed
+∑ 528 (0.01%)
+Δ -26 / day
+Population currently in incubation.
+Infectious
+∑ 342 (0.00%)
+Δ -17 / day
+Number of infections actively circulating.
+Removed
+∑ 860,532 (12.29%)
+Δ -196 / day
+Population no longer infectious due to isolation or immunity.
+Recovered
+∑ 832,700 (11.90%)
+Full recoveries.
+Hospitalized
+∑ 9,007 (0.13%)
+Δ -281 / day
+Active hospitalizations.
+Fatalities
+∑ 16,479 (0.24%)
+Δ 25 / day
+Deaths.
+0 50,000100,000150,000200,000Day 020406080100120140160180200
+Rt=0.73\mathcal{R}_t=0.73Rt​=0.73 ⟶
+⟵ R0=2.20\mathcal{R}_0=2.20R0​=2.20
+Intervention on day 100
+(drag me)
+to decrease transmission by
+66.67%
+First death
+Peak: 74,738 hospitalizations
+linear scale
+Transmission Dynamics
+Clinical Dynamics
+Population Inputs
+Size of population.
+7,000,000
+Number of initial infections.
+1
+Basic Reproduction Number R0\mathcal{R}_0R0​
+Measure of contagiousness: the number of secondary infections each infected individual produces.
+2.2
+Transmission Times
+Length of incubation period, TincT_{\text{inc}}Tinc​.
+5.20 days
+Duration patient is infectious, TinfT_{\text{inf}}Tinf​.
+2.9 Days
+Mortality Statistics
+Case fatality rate.
+2.00 %
+Time from end of incubation to death.
+32 Days
+Recovery Times
+Length of hospital stay
+28.6 Days
+Recovery time for mild cases
+11.1 Days
+Care statistics
+Hospitalization rate.
+20.00 %
+Time to hospitalization.
+5 Days
+
+At the time of writing, the coronavirus disease of 2019 remains a global health crisis of grave and uncertain magnitude. To the non-expert (such as myself), contextualizing the numbers, forecasts and epidemiological parameters described in the media and literature can be challenging. I created this calculator as an attempt to address this gap in understanding.
+
+This calculator implements a classical infectious disease model — SEIR (Susceptible → Exposed → Infected → Removed), an idealized model of spread still used in frontlines of research e.g. [Wu, et. al, Kucharski et. al]. The dynamics of this model are characterized by a set of four ordinary differential equations that correspond to the stages of the disease's progression: dSdt=−RtTinf⋅IS,dEdt=RtTinf⋅IS−Tinc−1E,dIdt=Tinc−1E−Tinf−1I,dRdt=Tinf−1I\frac{d S}{d t}=-\color{#CCC}{\frac{\mathcal{R}_{t}}{T_{\text{inf}}}} \cdot IS,\qquad \frac{d E}{d t}=\color{#CCC}{\frac{\mathcal{R}_{t}}{T_{\text{inf}}}} \cdot IS- \color{#CCC}{T^{-1}_{\text{inc}}} E,\qquad \frac{d I}{d t}=\color{#CCC}{T^{-1}_{\text{inc}}} E-\color{#CCC}{T^{-1}_{\text{inf}}}I, \qquad \frac{d R}{d t}=\color{#CCC}{T^{-1}_{\text{inf}}}IdtdS​=−Tinf​Rt​​⋅IS,dtdE​=Tinf​Rt​​⋅IS−Tinc−1​E,dtdI​=Tinc−1​E−Tinf−1​I,dtdR​=Tinf−1​I In addition to the transmission dynamics, this model allows the use of supplemental timing information to model the death rate and healthcare burden.
+
+Note that one can use this calculator to measure one's risk exposure to the disease for any given day of the epidemic: the probability of getting infected on day 218 given close contact with individuals is 0.00088% given an attack rate of 0.45% [Burke et. al].
+
+A sampling of the estimates for epidemic parameters are presented below:
+	Location 	Reproduction Number
+R0\mathcal{R}_0R0​ 	Incubation Period
+TincT_{\text{inc}}Tinc​ (in days) 	Infectious Period
+TinfT_{\text{inf}}Tinf​ (in days)
+Kucharski et. al 	Wuhan 	3.0 (1.5 — 4.5) 	5.2 	2.9
+Li, Leung and Leung 	Wuhan 	2.2 (1.4 — 3.9) 	5.2 (4.1 — 7.0) 	2.3 (0.0 — 14.9)
+Wu et. al 	Greater Wuhan 	2.68 (2.47 — 2.86) 	6.1 	2.3
+WHO Initial Estimate 	Hubei 	1.95 (1.4 — 2.5) 		
+WHO-China Joint Mission 	Hubei 	2.25 (2.0 — 2.5) 	5.5 (5.0 - 6.0) 	
+Liu et. al 	Guangdong 	4.5 (4.4 — 4.6) 	4.8 (2.2 — 7.4) 	2.9 (0 — 5.9)
+Rocklöv, Sjödin and Wilder-Smith 	Princess Diamond 	14.8 	5.0 	10.0
+Backer, Klinkenberg, Wallinga 	Wuhan 		6.5 (5.6 — 7.9) 	
+Read et. al 	Wuhan 	3.11 (2.39 — 4.13) 		
+Bi et. al 	Shenzhen 		4.8 (4.2 — 5.4) 	1.5 (0 — 3.4) 	
+Tang et. al 	China 	6.47 (5.71 — 7.23) 		
+
+See [Liu et. al] detailed survey of current estimates of the reproduction number. Parameters for the diseases' clinical characteristics are taken from the following WHO Report.
+
+Please DM me feedback here or email me here. My website.
+
+Model Details
+The clinical dynamics in this model are an elaboration on SEIR that simulates the disease's progression at a higher resolution, subdividing I,RI,RI,R into mild (patients who recover without the need for hospitalization), moderate (patients who require hospitalization but survive) and fatal (patients who require hospitalization and do not survive). Each of these variables follows its own trajectory to the final outcome, and the sum of these compartments add up to the values predicted by SEIR. Please refer to the source code for details. Note that we assume, for simplicity, that all fatalities come from hospitals, and that all fatal cases are admitted to hospitals immediately after the infectious period.
+
+Acknowledgements
+Steven De Keninck for RK4 Integrator. Chris Olah, Shan Carter and Ludwig Schubert wonderful feedback. Nikita Jerschov for improving clarity of text. Charie Huang for context and discussion.
+Export parameters:
