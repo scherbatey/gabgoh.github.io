@@ -3095,7 +3095,7 @@
 
     // (199:6) {#each xScaleTime.ticks() as i}
     function create_each_block_3(ctx) {
-    	var g, text_1, t0_value = ctx.i == 0 ? "Day ":"" + "", t0, t1_value = ctx.i + "", t1, g_transform_value;
+    	var g, text_1, t0_value = ctx.i == 0 ? "День ":"" + "", t0, t1_value = ctx.i + "", t1, g_transform_value;
 
     	const block = {
     		c: function create() {
@@ -3897,7 +3897,7 @@
     		if ('total' in $$props) $$invalidate('total', total = $$props.total);
     		if ('vline' in $$props) $$invalidate('vline', vline = $$props.vline);
     		if ('timestep' in $$props) $$invalidate('timestep', timestep = $$props.timestep);
-    		if ('total_infected' in $$props) $$invalidate('total_infected', total_infected = $$props.total_infected);
+    		if ('total_infected (Заразний)' in $$props) $$invalidate('total_infected', total_infected = $$props.total_infected);
     		if ('N' in $$props) $$invalidate('N', N = $$props.N);
     		if ('ymax' in $$props) $$invalidate('ymax', ymax = $$props.ymax);
     		if ('InterventionTime' in $$props) $$invalidate('InterventionTime', InterventionTime = $$props.InterventionTime);
@@ -5454,7 +5454,7 @@
         if (!strict || strict === "ignore") {
           return;
         } else if (strict === true || strict === "error") {
-          throw new src_ParseError("LaTeX-incompatible input and strict mode is set to 'error': " + (errorMsg + " [" + errorCode + "]"), token);
+          throw new src_ParseError("LaTeX-incompatible input і strict mode is set to 'error': " + (errorMsg + " [" + errorCode + "]"), token);
         } else if (strict === "warn") {
           typeof console !== "undefined" && console.warn("LaTeX-incompatible input and strict mode is set to 'warn': " + (errorMsg + " [" + errorCode + "]"));
         } else {
@@ -12507,7 +12507,7 @@
             widthClasses = ["brace-left", "brace-center", "brace-right"];
             aligns = ["xMinYMin", "xMidYMin", "xMaxYMin"];
           } else {
-            throw new Error("Correct katexImagesData or update code here to support\n                    " + numSvgChildren + " children.");
+            throw new Error("Correct katexImagesData or update code тут to support\n                    " + numSvgChildren + " children.");
           }
 
           for (var i = 0; i < numSvgChildren; i++) {
@@ -15362,7 +15362,7 @@
 
     defineEnvironment({
       type: "array",
-      names: ["gathered"],
+      names: ["gatпоштуd"],
       props: {
         numArgs: 0
       },
@@ -22756,7 +22756,7 @@
     			link = element("link");
     			t0 = space();
     			h2 = element("h2");
-    			h2.textContent = "Epidemic Calculator";
+    			h2.textContent = "Калькулятор епідемії";
     			t2 = space();
     			div75 = element("div");
     			div50 = element("div");
@@ -22776,7 +22776,7 @@
     			t8 = space();
     			div5 = element("div");
     			div1 = element("div");
-    			div1.textContent = "Susceptible";
+    			div1.textContent = "Вразливі";
     			t10 = space();
     			div4 = element("div");
     			div2 = element("div");
@@ -22798,7 +22798,7 @@
     			t21 = text(" / day");
     			t22 = space();
     			div6 = element("div");
-    			div6.textContent = "Population not immune to disease.";
+    			div6.textContent = "Населення, що не має імунітету до інфекції.";
     			t24 = space();
     			div14 = element("div");
     			checkbox1.$$.fragment.c();
@@ -22807,7 +22807,7 @@
     			t26 = space();
     			div12 = element("div");
     			div8 = element("div");
-    			div8.textContent = "Exposed";
+    			div8.textContent = "Контактні (заражені)";
     			t28 = space();
     			div11 = element("div");
     			div9 = element("div");
@@ -22829,7 +22829,7 @@
     			t39 = text(" / day");
     			t40 = space();
     			div13 = element("div");
-    			div13.textContent = "Population currently in incubation.";
+    			div13.textContent = "Знаходяться в інкубаційному періоді хвороби.";
     			t42 = space();
     			div21 = element("div");
     			checkbox2.$$.fragment.c();
@@ -22838,7 +22838,7 @@
     			t44 = space();
     			div19 = element("div");
     			div15 = element("div");
-    			div15.textContent = "Infectious";
+    			div15.textContent = "Заразні";
     			t46 = space();
     			div18 = element("div");
     			div16 = element("div");
@@ -22860,10 +22860,10 @@
     			t57 = text(" / day");
     			t58 = space();
     			div20 = element("div");
-    			t59 = text("Number of infections ");
+    			t59 = text("Люди, які ");
     			i6 = element("i");
-    			i6.textContent = "actively";
-    			t61 = text(" circulating.");
+    			i6.textContent = "активно";
+    			t61 = text(" розповсюджують інфекцію.");
     			t62 = space();
     			div28 = element("div");
     			checkbox3.$$.fragment.c();
@@ -22872,7 +22872,7 @@
     			t64 = space();
     			div26 = element("div");
     			div22 = element("div");
-    			div22.textContent = "Removed";
+    			div22.textContent = "Вилучені";
     			t66 = space();
     			div25 = element("div");
     			div23 = element("div");
@@ -22894,7 +22894,7 @@
     			t77 = text(" / day");
     			t78 = space();
     			div27 = element("div");
-    			div27.textContent = "Population no longer infectious due to isolation or immunity.";
+    			div27.textContent = "Вже не заразні через ізоляцію чи імунітет.";
     			t80 = space();
     			div34 = element("div");
     			checkbox4.$$.fragment.c();
@@ -22903,7 +22903,7 @@
     			t82 = space();
     			div32 = element("div");
     			div29 = element("div");
-    			div29.textContent = "Recovered";
+    			div29.textContent = "Одужали";
     			t84 = space();
     			div31 = element("div");
     			div30 = element("div");
@@ -22917,7 +22917,7 @@
     			t90 = text("%)");
     			t91 = space();
     			div33 = element("div");
-    			div33.textContent = "Full recoveries.";
+    			div33.textContent = "Повне відновлення.";
     			t93 = space();
     			div41 = element("div");
     			arrow5.$$.fragment.c();
@@ -22926,7 +22926,7 @@
     			t95 = space();
     			div39 = element("div");
     			div35 = element("div");
-    			div35.textContent = "Hospitalized";
+    			div35.textContent = "Госпіталізовані";
     			t97 = space();
     			div37 = element("div");
     			div36 = element("div");
@@ -22948,7 +22948,7 @@
     			t108 = text(" / day");
     			t109 = space();
     			div40 = element("div");
-    			div40.textContent = "Active hospitalizations.";
+    			div40.textContent = "Поточне знаходження в лікарні.";
     			t111 = space();
     			div48 = element("div");
     			arrow6.$$.fragment.c();
@@ -22957,7 +22957,7 @@
     			t113 = space();
     			div46 = element("div");
     			div42 = element("div");
-    			div42.textContent = "Fatalities";
+    			div42.textContent = "Загибелі";
     			t115 = space();
     			div45 = element("div");
     			div43 = element("div");
@@ -22979,7 +22979,7 @@
     			t126 = text(" / day");
     			t127 = space();
     			div47 = element("div");
-    			div47.textContent = "Deaths.";
+    			div47.textContent = "Смертей.";
     			t129 = space();
     			div74 = element("div");
     			div51 = element("div");
@@ -22999,12 +22999,12 @@
     			t135 = space();
     			div58 = element("div");
     			div55 = element("div");
-    			t136 = text("Intervention on day ");
+    			t136 = text("Втручання на день ");
     			t137 = text(t137_value);
     			t138 = space();
     			span15 = element("span");
     			div56 = element("div");
-    			div56.textContent = "(drag me)";
+    			div56.textContent = "(тягніть)";
     			t140 = space();
     			div57 = element("div");
     			svg = svg_element("svg");
@@ -23020,7 +23020,7 @@
     			div66 = element("div");
     			div63 = element("div");
     			div62 = element("div");
-    			t143 = text("to decrease transmission by");
+    			t143 = text("зменшити передачу на");
     			br1 = element("br");
     			t144 = space();
     			div65 = element("div");
@@ -23041,25 +23041,25 @@
     			div72 = element("div");
     			checkbox7.$$.fragment.c();
     			div71 = element("div");
-    			div71.textContent = "linear scale";
+    			div71.textContent = "лінійна шкала";
     			t151 = space();
     			div117 = element("div");
     			div79 = element("div");
     			div76 = element("div");
-    			div76.textContent = "Transmission Dynamics";
+    			div76.textContent = "Динаміка передачі";
     			t153 = space();
     			div77 = element("div");
     			t154 = space();
     			div78 = element("div");
-    			div78.textContent = "Clinical Dynamics";
+    			div78.textContent = "Клінічна динаміка";
     			t156 = space();
     			div116 = element("div");
     			div85 = element("div");
     			div80 = element("div");
-    			div80.textContent = "Population Inputs";
+    			div80.textContent = "Змінні щодо населення";
     			t158 = space();
     			div81 = element("div");
-    			t159 = text("Size of population.");
+    			t159 = text("Чисельність населення.");
     			br2 = element("br");
     			t160 = space();
     			div82 = element("div");
@@ -23068,7 +23068,7 @@
     			input1 = element("input");
     			t163 = space();
     			div83 = element("div");
-    			t164 = text("Number of initial infections.");
+    			t164 = text("Кількість початкових інфекцій.");
     			br3 = element("br");
     			t165 = space();
     			div84 = element("div");
@@ -23079,10 +23079,10 @@
     			div90 = element("div");
     			div88 = element("div");
     			div86 = element("div");
-    			t169 = text("Basic Reproduction Number ");
+    			t169 = text("Базове репродукційне число ");
     			t170 = space();
     			div87 = element("div");
-    			t171 = text("Measure of contagiousness: the number of secondary infections each infected individual produces. ");
+    			t171 = text("Міра заразності: кількість вторинних інфекцій, які виробляє кожен заражений індивід. ");
     			br4 = element("br");
     			t172 = space();
     			div89 = element("div");
@@ -23092,10 +23092,10 @@
     			t175 = space();
     			div96 = element("div");
     			div91 = element("div");
-    			div91.textContent = "Transmission Times";
+    			div91.textContent = "Період передачі";
     			t177 = space();
     			div92 = element("div");
-    			t178 = text("Length of incubation period, ");
+    			t178 = text("Тривалість інкубаційного періоду, ");
     			t179 = text(".");
     			br5 = element("br");
     			t180 = space();
@@ -23106,13 +23106,13 @@
     			input4 = element("input");
     			t184 = space();
     			div94 = element("div");
-    			t185 = text("Duration patient is infectious, ");
+    			t185 = text("Тривалість заразності хворого, ");
     			t186 = text(".");
     			br6 = element("br");
     			t187 = space();
     			div95 = element("div");
     			t188 = text(ctx.D_infectious);
-    			t189 = text(" Days");
+    			t189 = text(" дня");
     			t190 = space();
     			input5 = element("input");
     			t191 = space();
@@ -23120,10 +23120,10 @@
     			t192 = space();
     			div103 = element("div");
     			div98 = element("div");
-    			div98.textContent = "Mortality Statistics";
+    			div98.textContent = "Статистика смертності";
     			t194 = space();
     			div99 = element("div");
-    			t195 = text("Case fatality rate.");
+    			t195 = text("Смертність (CFR).");
     			br7 = element("br");
     			t196 = space();
     			div100 = element("div");
@@ -23133,45 +23133,45 @@
     			input6 = element("input");
     			t200 = space();
     			div101 = element("div");
-    			t201 = text("Time from end of incubation to death.");
+    			t201 = text("Час від закінчення інкубаційного періоду до смерті.");
     			br8 = element("br");
     			t202 = space();
     			div102 = element("div");
     			t203 = text(ctx.Time_to_death);
-    			t204 = text(" Days");
+    			t204 = text(" днів");
     			t205 = space();
     			input7 = element("input");
     			t206 = space();
     			div109 = element("div");
     			div104 = element("div");
-    			div104.textContent = "Recovery Times";
+    			div104.textContent = "Період одужання";
     			t208 = space();
     			div105 = element("div");
-    			t209 = text("Length of hospital stay");
+    			t209 = text("Тривалість перебування в лікарні");
     			br9 = element("br");
     			t210 = space();
     			div106 = element("div");
     			t211 = text(ctx.D_recovery_severe);
-    			t212 = text(" Days");
+    			t212 = text(" днів");
     			t213 = space();
     			input8 = element("input");
     			t214 = space();
     			div107 = element("div");
-    			t215 = text("Recovery time for mild cases");
+    			t215 = text("Час одужання для легких випадків");
     			br10 = element("br");
     			t216 = space();
     			div108 = element("div");
     			t217 = text(ctx.D_recovery_mild);
-    			t218 = text(" Days");
+    			t218 = text(" днів");
     			t219 = space();
     			input9 = element("input");
     			t220 = space();
     			div115 = element("div");
     			div110 = element("div");
-    			div110.textContent = "Care statistics";
+    			div110.textContent = "Статистика медичної допомоги";
     			t222 = space();
     			div111 = element("div");
-    			t223 = text("Hospitalization rate.");
+    			t223 = text("Частота госпіталізації.");
     			br11 = element("br");
     			t224 = space();
     			div112 = element("div");
@@ -23181,7 +23181,7 @@
     			input10 = element("input");
     			t228 = space();
     			div113 = element("div");
-    			t229 = text("Time to hospitalization.");
+    			t229 = text("Час до госпіталізації.");
     			br12 = element("br");
     			t230 = space();
     			div114 = element("div");
@@ -23193,10 +23193,10 @@
     			div118 = element("div");
     			t235 = space();
     			p0 = element("p");
-    			p0.textContent = "At the time of writing, the coronavirus disease of 2019 remains a global health crisis of grave and uncertain magnitude. To the non-expert (such as myself), contextualizing the numbers, forecasts and epidemiological parameters described in the media and literature can be challenging. I created this calculator as an attempt to address this gap in understanding.";
+    			p0.textContent = "На момент написання статті COVID-19 залишається глобальною кризою охорони здоров’я з тяжкими та невизначеними наслідками. Для неекспертів розуміння контексту чисел, прогнозів та епідеміологічних параметрів, описаних у ЗМІ та літературі, може бути складним. Ми створили цей калькулятор як спробу усунути цю прогалину в розумінні.";
     			t237 = space();
     			p1 = element("p");
-    			t238 = text("This calculator implements a classical infectious disease model — ");
+    			t238 = text("Цей калькулятор реалізує класичну модель інфекційних захворювань — ");
     			b1 = element("b");
     			a0 = element("a");
     			a0.textContent = "SEIR";
@@ -23204,11 +23204,11 @@
     			t241 = text("(");
     			b2 = element("b");
     			b2.textContent = "S";
-    			t243 = text("usceptible → ");
+    			t243 = text("usceptible (Вразливий) → ");
     			span16 = element("span");
     			b3 = element("b");
     			b3.textContent = "E";
-    			t245 = text("xposed → ");
+    			t245 = text("xposed (Заражений) → ");
     			span17 = element("span");
     			b4 = element("b");
     			b4.textContent = "I";
@@ -23216,33 +23216,33 @@
     			span18 = element("span");
     			b5 = element("b");
     			b5.textContent = "R";
-    			t249 = text("emoved), an idealized model of spread still used in frontlines of research e.g. [");
+    			t249 = text("emoved (Вилучений)), ідеалізовану модель поширення, яка все ще використовується на передовій наукових досліджень, наприклад [");
     			a1 = element("a");
     			a1.textContent = "Wu, et. al";
     			t251 = text(", ");
     			a2 = element("a");
     			a2.textContent = "Kucharski et. al";
-    			t253 = text("]. The dynamics of this model are characterized by a set of four ordinary differential equations that correspond to the stages of the disease's progression:\n");
+    			t253 = text("]. Динаміка цієї моделі характеризується набором чотирьох звичайних диференціальних рівнянь, які відповідають стадіям прогресування хвороби:\n");
     			span19 = element("span");
-    			t254 = text("\nIn addition to the transmission dynamics, this model allows the use of supplemental timing information to model the death rate and healthcare burden.");
+    			t254 = text("\nОкрім динаміки передачі, ця модель дозволяє використовувати додаткову інформацію про терміни для моделювання смертності та навантаження на охорону здоров'я.");
     			t255 = space();
     			p2 = element("p");
-    			t256 = text("Note that one can use this calculator to measure one's risk exposure to the disease for any given day of the epidemic: the probability of getting infected on day ");
+    			t256 = text("Зауважте, що можна використовувати цей калькулятор для вимірювання індивідуального ризику зараження на будь-який день епідемії: ймовірність заразитися на день ");
     			t257 = text(t257_value);
-    			t258 = text(" given ");
+    			t258 = text(" при ");
     			a3 = element("a");
-    			a3.textContent = "close contact";
+    			a3.textContent = "тісному контакті";
     			t260 = text(" with ");
     			input12 = element("input");
-    			t261 = text(" individuals is ");
+    			t261 = text(" людьми становить ");
     			t262 = text(t262_value);
-    			t263 = text("% given an attack rate of 0.45% [");
+    			t263 = text("% в порівнянні з ризиком серцевого нападу 0.45% [");
     			a4 = element("a");
     			a4.textContent = "Burke et. al";
     			t265 = text("].");
     			t266 = space();
     			p3 = element("p");
-    			p3.textContent = "A sampling of the estimates for epidemic parameters are presented below:";
+    			p3.textContent = "Вибірка оцінок параметрів епідемії представлена ​​нижче:";
     			t268 = space();
     			div119 = element("div");
     			table = element("table");
@@ -23250,24 +23250,24 @@
     			th0 = element("th");
     			t269 = space();
     			th1 = element("th");
-    			th1.textContent = "Location";
+    			th1.textContent = "Місце";
     			t271 = space();
     			th2 = element("th");
-    			t272 = text("Reproduction Number");
+    			t272 = text("Репродукційне число");
     			br13 = element("br");
     			t273 = space();
     			t274 = space();
     			th3 = element("th");
-    			t275 = text("Incubation Period");
+    			t275 = text("Інкубаційний період");
     			br14 = element("br");
     			t276 = space();
-    			t277 = text(" (in days)");
+    			t277 = text(" (в днях)");
     			t278 = space();
     			th4 = element("th");
-    			t279 = text("Infectious Period");
+    			t279 = text("Інфекційний період");
     			br15 = element("br");
     			t280 = space();
-    			t281 = text(" (in days)");
+    			t281 = text(" (в днях)");
     			t282 = space();
     			tr1 = element("tr");
     			td0 = element("td");
@@ -23449,50 +23449,50 @@
     			td55 = element("td");
     			t383 = space();
     			p4 = element("p");
-    			t384 = text("See [");
+    			t384 = text("Див. [");
     			a16 = element("a");
     			a16.textContent = "Liu et. al";
-    			t386 = text("] detailed survey of current estimates of the reproduction number. Parameters for the diseases' clinical characteristics are taken from the following ");
+    			t386 = text("] детальний огляд поточних оцінок репродукційного числа. Параметри клінічних характеристик захворювань взяті з наступного ");
     			a17 = element("a");
-    			a17.textContent = "WHO Report";
+    			a17.textContent = "звіту ВООЗ";
     			t388 = text(".");
     			t389 = space();
     			p5 = element("p");
-    			t390 = text("Please DM me feedback ");
+    			t390 = text("Будь ласка, залиште мені відгуки ");
     			a18 = element("a");
-    			a18.textContent = "here";
-    			t392 = text(" or email me ");
+    			a18.textContent = "тут";
+    			t392 = text(" або напишіть на мою ");
     			a19 = element("a");
-    			a19.textContent = "here";
-    			t394 = text(". My ");
+    			a19.textContent = "пошту";
+    			t394 = text(". Мій ");
     			a20 = element("a");
-    			a20.textContent = "website";
+    			a20.textContent = "веб-сайт";
     			t396 = text(".");
     			t397 = space();
     			p6 = element("p");
     			b6 = element("b");
-    			b6.textContent = "Model Details ";
+    			b6.textContent = "Деталі моделі ";
     			br16 = element("br");
-    			t399 = text("\nThe clinical dynamics in this model are an elaboration on SEIR that simulates the disease's progression at a higher resolution, subdividing ");
-    			t400 = text(" into ");
+    			t399 = text("\nКлінічна динаміка в цій моделі - це запровадження SEIR, яка моделює прогресування захворювання з більш високою роздільною здатністю, поділяючи ");
+    			t400 = text(" на ");
     			i14 = element("i");
-    			i14.textContent = "mild";
-    			t402 = text(" (patients who recover without the need for hospitalization), ");
+    			i14.textContent = "легкі";
+    			t402 = text(" (пацієнти, які одужують без необхідності госпіталізації), ");
     			i15 = element("i");
-    			i15.textContent = "moderate";
-    			t404 = text(" (patients who require hospitalization but survive) and ");
+    			i15.textContent = "середні";
+    			t404 = text(" (пацієнти, які потребують госпіталізації, але виживають) і ");
     			i16 = element("i");
-    			i16.textContent = "fatal";
-    			t406 = text(" (patients who require hospitalization and do not survive). Each of these variables follows its own trajectory to the final outcome, and the sum of these compartments add up to the values predicted by SEIR. Please refer to the source code for details. Note that we assume, for simplicity, that all fatalities come from hospitals, and that all fatal cases are admitted to hospitals immediately after the infectious period.");
+    			i16.textContent = "смертельні";
+    			t406 = text(" (пацієнти, які потребують госпіталізації та не виживають). Кожна з цих змінних слідує за власною траєкторією до кінцевого результату, і сума цих відсіків доходить до значень, передбачених SEIR. Для детальної інформації зверніться до вихідного коду. Зауважимо, що для простоти ми припускаємо, що всі смерті відбуваються у лікарнях, і що всі летальні випадки приймаються до лікарень відразу після періоду заразності.");
     			t407 = space();
     			p7 = element("p");
     			b7 = element("b");
-    			b7.textContent = "Acknowledgements ";
+    			b7.textContent = "Подяка ";
     			br17 = element("br");
     			t409 = space();
     			a21 = element("a");
     			a21.textContent = "Steven De Keninck";
-    			t411 = text(" for RK4 Integrator. ");
+    			t411 = text(" за інтегратор RK4. ");
     			a22 = element("a");
     			a22.textContent = "Chris Olah";
     			t413 = text(", ");
@@ -23501,15 +23501,15 @@
     			t415 = text(" and ");
     			a24 = element("a");
     			a24.textContent = "Ludwig Schubert";
-    			t417 = text(" wonderful feedback. ");
+    			t417 = text(" за фідбек. ");
     			a25 = element("a");
     			a25.textContent = "Nikita Jerschov";
-    			t419 = text(" for improving clarity of text. Charie Huang for context and discussion.");
+    			t419 = text(" за покращення тексту. Charie Huang за контекст і обговорення.");
     			t420 = space();
     			div122 = element("div");
     			div121 = element("div");
     			div120 = element("div");
-    			div120.textContent = "Export parameters:";
+    			div120.textContent = "Експортувати параметри:";
     			t422 = space();
     			form = element("form");
     			textarea = element("textarea");
@@ -25933,13 +25933,13 @@
         var milestones = [];
         for (var i = 0; i < P.length; i++) {
           if (P[i][0] >= 0.5) {
-            milestones.push([i*dt, "First death"]);
+            milestones.push([i*dt, "Перша смерть"]);
             break
           }
         }
 
         var i = argmax(P, 1);
-        milestones.push([i*dt, "Peak: " + format(",")(Math.round(P[i][1])) + " hospitalizations"]);
+        milestones.push([i*dt, "Пік: " + format(",")(Math.round(P[i][1])) + " госпіталізацій"]);
 
         return milestones
       }
